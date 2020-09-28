@@ -1,0 +1,78 @@
+@tailwind base;
+
+@tailwind components;
+
+.color-btn {
+  @apply outline-none rounded-full p-3;
+}
+
+.color-btn:hover,
+.color-btn:focus {
+  @apply shadow-outline outline-none;
+}
+
+label + label {
+  margin-left: 0.5rem;
+}
+
+input[type='radio']:checked + .color-btn {
+  @apply shadow-outline outline-none;
+}
+
+.btn {
+  @apply m-1 p-3 rounded-full text-gray-600 bg-opacity-25;
+}
+
+.btn:hover,
+.btn:focus {
+  @apply bg-gray-700 text-gray-500 bg-opacity-25 outline-none;
+}
+
+.note {
+  @apply border-2 border-gray-800 rounded-lg pt-2 text-gray-400 flex flex-col max-w-screen-sm w-full;
+}
+
+.note + .note {
+  @apply mt-8;
+}
+
+.note h6 {
+  @apply text-2xl font-semibold px-4 mb-2;
+}
+
+.note p {
+  @apply px-4;
+}
+
+.z-minus {
+  z-index: -1;
+}
+
+.ease-out {
+  transition: all 0.1s ease-out;
+}
+
+[contenteditable='true']:empty::before {
+  content: attr(placeholder);
+  color: #718096;
+  outline: none;
+  border: none;
+}
+[contenteditable='true']:focus {
+  outline: none;
+  border: none;
+}
+
+.nav-bar-hidden {
+  transform: translateX(-50vw) !important;
+  width: 0 !important;
+  transition: all 0.2s ease-out;
+}
+
+.nav-bar {
+  transform: translateX(0);
+  width: fit-content;
+  transition: all 0.2s ease-out;
+}
+
+@tailwind utilities;
