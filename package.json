@@ -4,7 +4,7 @@
   "description": "google keep clone",
   "main": "index.js",
   "scripts": {
-    "build:ui": "tailwindcss build src/assets/css/index.css -o src/assets/css/app.css",
+    "build:ui": "tailwindcss build assets/css/index.css -o assets/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "astrid lyre",
